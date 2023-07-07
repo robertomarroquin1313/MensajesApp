@@ -4,6 +4,8 @@
  */
 package Model;
 
+import java.sql.Date;
+
 /**
  *
  * @author Roberto Marroquín
@@ -12,14 +14,14 @@ public class Mensajes {
     private int idMensaje;
     private String mensaje;
     private String autorMensaje;
-    private String fecha;
+    private Date fecha;
     
     
     public Mensajes(){
         
     }
     
-     public Mensajes(String mensaje, String autorMensaje, String fecha) {
+     public Mensajes(String mensaje, String autorMensaje, Date fecha) {
         this.mensaje = mensaje;
         this.autorMensaje = autorMensaje;
         this.fecha = fecha;
@@ -50,11 +52,11 @@ public class Mensajes {
         this.autorMensaje = autorMensaje;
     }
 
-    public String getFecha() {
+    public Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(String fecha) {
+    public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
 
