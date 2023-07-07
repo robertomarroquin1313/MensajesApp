@@ -4,10 +4,24 @@
  */
 package Service;
 
+import Model.Mensajes;
+
 /**
  *
  * @author Roberto Marroquín
  */
 public class MensajesService {
+    public static void crearMensajeDB(){
+        
+    }
     
+    public static void listarMensajeDB(){
+        
+    }
+    public static void borrarMensajeDB(){
+        
+    }
+    public static void editarMensajeDB(){
+        
+    }
 }

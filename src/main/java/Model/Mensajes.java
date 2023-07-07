@@ -13,7 +13,19 @@ public class Mensajes {
     private String mensaje;
     private String autorMensaje;
     private String fecha;
+    
+    
+    public Mensajes(){
+        
+    }
+    
+     public Mensajes(String mensaje, String autorMensaje, String fecha) {
+        this.mensaje = mensaje;
+        this.autorMensaje = autorMensaje;
+        this.fecha = fecha;
+    }
 
+    
     public int getIdMensaje() {
         return idMensaje;
     }
@@ -45,6 +57,8 @@ public class Mensajes {
     public void setFecha(String fecha) {
         this.fecha = fecha;
     }
-    
+
+   
+
     
 }

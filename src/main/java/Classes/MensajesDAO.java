@@ -4,10 +4,25 @@
  */
 package Classes;
 
+import Model.Mensajes;
+
 /**
  *
  * @author Roberto Marroquín
  */
-public class MensajesDAO {
+public class MensajesDAO extends Mensajes {
     
+    
+    public static void crearMensajeDB(Mensajes mensaje){
+        
+    }
+    public static void leerMensajeDB(){
+        
+    }
+    public static void borrarMensajeDB(int idMensaje){
+        
+    }
+    public static void actualizarMensajeDB(Mensajes mensaje){
+        
+    }
 }
