@@ -8,6 +8,7 @@ import Service.MensajesService;
 import com.mycompany.mensajesapp.Connection.Conexion;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.text.ParseException;
 import java.util.Scanner;
 
 /**
@@ -16,7 +17,7 @@ import java.util.Scanner;
  */
 public class MensajesApp {
   
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) throws SQLException, ParseException {
         
         Scanner entrada = new Scanner(System.in);
         int op = 0;
