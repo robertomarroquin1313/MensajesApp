@@ -91,6 +91,24 @@ public class MensajesDAO extends Mensajes {
         }
     }
     public static void actualizarMensajeDB(Mensajes mensaje){
-        
+        Conexion dbConnect = new Conexion();
+
+        try(Connection cone = dbConnect.get_Connection()){
+            
+            PreparedStatement ps=null;
+            
+            try{
+                String query = "update mensajes set mensaje = ? where idMensaje = ?";
+                ps=cone.prepareStatement(query);
+                ps.setString(1, mensaje.getMensaje());
+                ps.setInt(2, mensaje.getIdMensaje());
+                ps.executeUpdate();
+                System.out.println("El mensaje se actualizo correctamente.");
+            }catch(SQLException ex){
+                System.out.println("El mensaje no se actualizo. "+ex);
+            }
+        }catch(SQLException e){
+            System.out.println("Ocurrio un error: "+e);
+        }
     }
 }
