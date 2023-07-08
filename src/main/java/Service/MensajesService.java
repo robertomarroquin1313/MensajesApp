@@ -7,8 +7,6 @@ package Service;
 import Classes.MensajesDAO;
 import Model.Mensajes;
 import java.sql.Date;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Scanner;
 
@@ -17,7 +15,11 @@ import java.util.Scanner;
  * @author Roberto Marroquín
  */
 public class MensajesService {
-    public static void crearMensajeDB() throws ParseException{
+    
+    /**
+     *  Descripcion: Esta funcion captura los datos solicitados "Mensaje" y "Autor"
+     */
+    public static void crearMensajeDB(){
         Scanner entrada = new Scanner(System.in);
         
         System.out.print("Escribe tu mensaje: ");
@@ -36,19 +38,17 @@ public class MensajesService {
         mensaje.setFecha( Date.valueOf(LocalDate.now()));
         //Enviamos el Mensaje a la clase DAO para que ejecute el statement
         MensajesDAO.crearMensajeDB(mensaje);
-        
-        
-  
-        
-        
-     
-    }
+     }
     
     public static void listarMensajeDB(){
-        
+        MensajesDAO.leerMensajeDB();
     }
     public static void borrarMensajeDB(){
+        Scanner entrada = new Scanner (System.in);
+        System.out.print("Indica el Id del mensaje a borrar: ");
+        int idMensaje = entrada.nextInt();
         
+        MensajesDAO.borrarMensajeDB(idMensaje);
     }
     public static void editarMensajeDB(){
         
