@@ -41,7 +41,7 @@ public class MensajesApp {
                     MensajesService.crearMensajeDB();
                     break;  
                 case 2:
-                    MensajesService.editarMensajeDB();
+                    MensajesService.listarMensajeDB();
                     break;
                 case 3:
                     MensajesService.editarMensajeDB();
